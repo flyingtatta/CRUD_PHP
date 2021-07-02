@@ -52,19 +52,6 @@
           </tr>
         </thead>
         <tbody>
-
-          <?php
-          $products = getProducts();
-
-          while($row = mysqli_fetch_assoc($products)){
-            $product_id    = $row['product_id'];
-            $product_name  = $row['product_name'];
-            $product_desc  = $row['product_desc'];
-            $product_image = $row['product_image'];
-            $product_price = $row['product_price'];
-
-            $image_array = explode(", ", $product_image);
-          ?>
           <tr>
             <td>
               <span class="material-icons md-red" style="color: #4caf50;">preview</span>
@@ -110,9 +97,6 @@
               <span class="material-icons md-red" style="color: #e91e63;">delete</span>
             </td>
           </tr>
-          <?php
-          }
-          ?>
 
         </tbody>
       </table>
