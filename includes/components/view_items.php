@@ -55,10 +55,10 @@
         <?php echo $product_price; ?>
       </td>
       <td>
-        <span class="material-icons md-red" style="color: #2196f3;">edit</span>
+        <span class="material-icons" style="color: #2196f3;">edit</span>
       </td>
       <td>
-        <span class="material-icons md-red" style="color: #e91e63;">delete</span>
+        <span class="material-icons" style="color: #e91e63;">delete</span>
       </td>
     </tr>
     <?php
