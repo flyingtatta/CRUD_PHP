@@ -46,7 +46,7 @@
         <div class="card-columns">
         <?php foreach($image_array as $key => $value){ ?>
           <div class="card" style="border: none;">
-            <img class="rounded card-img-top" src="images/<?php echo $image_array[$key]; ?>">
+            <img class="rounded card-img-top" src="images/user_images/<?php echo $image_array[$key]; ?>">
           </div>
         <?php } ?>
       </div>
