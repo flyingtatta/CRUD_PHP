@@ -43,10 +43,10 @@
             </kbd>
           </td>
 
-          <td width="500">
+          <td width="400">
             <div class="card-columns">
               <?php foreach($image_array as $key => $value){ ?>
-                <div class="card" style="border: none; background-color: none;">
+                <div class="card" style="border: none; background-color: transparent;">
                   <img class="rounded card-img-top" src="images/user_images/<?php echo $image_array[$key]; ?>">
                 </div>
               <?php } ?>
