@@ -1,32 +1,31 @@
-<div class="card rounded">
-  <div class="table-responsive">
-    <table class="table table-striped">
-      <thead class="thead-dark">
-        <tr>
-          <th scope="col"></th>
-          <th scope="col">#</th>
-          <th scope="col">Name</th>
-          <th scope="col">Description</th>
-          <th scope="col"> </th>
-          <th scope="col">Image(s)</th>
-          <th scope="col">Price</th>
-          <th scope="col"></th>
-          <th scope="col"></th>
-        </tr>
-      </thead>
-      <tbody>
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Description</th>
+        <th scope="col"> </th>
+        <th scope="col">Image(s)</th>
+        <th scope="col">Price</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
 
-        <?php
-        $products = getProducts();
+      <?php
+      $products = getProducts();
 
-        while($row = mysqli_fetch_assoc($products)){
-          $product_id    = $row['product_id'];
-          $product_name  = $row['product_name'];
-          $product_desc  = $row['product_desc'];
-          $product_image = $row['product_image'];
-          $product_price = $row['product_price'];
+      while($row = mysqli_fetch_assoc($products)){
+        $product_id    = $row['product_id'];
+        $product_name  = $row['product_name'];
+        $product_desc  = $row['product_desc'];
+        $product_image = $row['product_image'];
+        $product_price = $row['product_price'];
 
-          $image_array = explode(", ", $product_image);
+        $image_array = explode(", ", $product_image);
         ?>
         <tr>
           <td>
@@ -44,14 +43,14 @@
             </kbd>
           </td>
 
-          <td width="400">
+          <td width="500">
             <div class="card-columns">
-            <?php foreach($image_array as $key => $value){ ?>
-              <div class="card" style="border: none;">
-                <img class="rounded card-img-top" src="images/user_images/<?php echo $image_array[$key]; ?>">
-              </div>
-            <?php } ?>
-          </div>
+              <?php foreach($image_array as $key => $value){ ?>
+                <div class="card" style="border: none; background-color: none;">
+                  <img class="rounded card-img-top" src="images/user_images/<?php echo $image_array[$key]; ?>">
+                </div>
+              <?php } ?>
+            </div>
           </td>
           <td>
             <?php echo $product_price; ?>
@@ -64,12 +63,10 @@
           </td>
         </tr>
         <?php
-        }
-        ?>
+      }
+      ?>
 
-      </tbody>
-    </table>
-
-  </div>
+    </tbody>
+  </table>
 
 </div>
